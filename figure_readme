@@ -1,0 +1,6 @@
+Readme for figure.
+
+The values for FMA with gauss-seidel and gauss-seidel with red/black
+ordering overlap.  Jacobi is slightly smaller than both of them, 
+and SOR is much slower.
+
