@@ -1,0 +1,37 @@
+README for the program FMA.f90, HW4
+Stephanie Aho 
+
+Compile:
+
+$ gfortran -o FMA FMA.f90
+
+Run:
+
+$ ./FMA
+            1
+ FMA timer:
+  0.13900000    
+           2
+ FMA timer:
+  0.13500001    
+           3
+ FMA timer:
+  0.14500000 
+
+
+**Output is the step number followed by the runtime for 
+that step of the algorithm**
+
+The program implements full multigrid algorithm for the 3D heat
+equation.  Jacobi, Gauss-Seidel, and Gauss-Seidel with black/red
+ordering are options for sweeps that can be commented out or 
+uncommented to select the desired method (in subroutine relax).
+The jacobi method is currently set. 
+
+The inclusion of a heat source at the center of the 3D cube is
+supported by the code. To change the value of this source, the
+value of the s needs to be changed in initialize (last line of
+code).
+
+There are initialize, relax, slvsml, rstrct, interp, resid, and
+addint subroutines included in the program. 
